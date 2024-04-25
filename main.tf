@@ -29,7 +29,7 @@ module "ec2" {
                 sudo yum update -y
                 sudo yum install -y docker
                 sudo service docker start
-                sudo docker run -d -p 80:5000 helenhaveloh/flask-gitlab
+                sudo docker run -d -p 80:5000 helenhaveloh/flask-gitlab:python-app-1.0
                 EOF
 }
 
