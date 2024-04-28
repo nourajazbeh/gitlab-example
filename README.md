@@ -15,6 +15,7 @@ Wir wollen eine einfache CI/CD Pipeline bauen.
 - Continuous Integration: Automatisches Zusammenführen von Codeänderungen in einem gemeinsamen Repository
 - Continuous Deployment: Automatisches Bereitstellen von Codeänderungen in einer Produktionsumgebung
 - Continuous Delivery: Automatisches Bereitstellen von Codeänderungen in einer Testumgebung
+![alt text](cicd.png)
 ### Andere CI/CD-Tools
 - Jenkins (immer noch viel verwendet)
 - Github Actions
@@ -33,6 +34,7 @@ Wir wollen eine einfache CI/CD Pipeline bauen.
 Der Gitlab-Server hostet den Anwendungscode und die Pipeline Konfiguration bzw. Gitlab Konfigurationen. Er organisiert also die Pipeline-Ausführung. Er "weiß was gemacht werden soll". Wir können einerseits `gitlab.com` nutzen oder aber eine eigene Instanz aufsetzen.
 2. Gitlab Runner (Runner von Gitlab oder eigener Runner)
 Einzelne Maschinen bzw. Agenten, die die CI/CD-Jobs dann ausführen. Sie sind die "Arbeiter" und führen die Pipeline aus. Wir können entweder die Runner von Gitlab nutzen oder aber eigene Runner aufsetzen. Gitlab bietet viele Runner an, die jeden User auf `gitlab.com` nutzen kann. Wir können aber auch eigene Runner aufsetzen, die dann in unserer Infrastruktur laufen.
+![alt text](gitlab-architecture.png)
 
 ## Beispiel: Flask-App CI/CD
 Wir wollen eine einfache Flask-App bauen und deployen. Dafür wollen wir eine CI/CD Pipeline bauen. Wir wollen, dass die Pipeline folgende Schritte durchführt:
@@ -40,6 +42,7 @@ Wir wollen eine einfache Flask-App bauen und deployen. Dafür wollen wir eine CI
 2. Bauen der Docker-Images
 3. Pushen der Docker-Images
 4. Deployen der Docker-Images mithilfe von Terraform-Template auf AWS
+![alt text](cicd-project.png)
 
 #### Einrichten des Gitlab-Accounts
 1. Account auf `gitlab.com` erstellen
