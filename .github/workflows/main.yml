@@ -5,13 +5,15 @@ on: [push]
 jobs:
   run_tests:
     runs-on: ubuntu-latest
-    container:
-      image: python:3.12.3-bookworm
     steps:
       - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
       - name: Install Dependencies
         run: |
-          apt-get update && apt-get install -y python3-pip
+          python -m pip install --upgrade pip
           pip install -Ur src/requirements.txt
       - name: Run Tests
         run: pytest -v src
