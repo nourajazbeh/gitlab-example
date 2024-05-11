@@ -6,7 +6,7 @@ on:
       - '*'
 
 env:
-  IMAGE_NAME: helenhaveloh/flask-gitlab
+  IMAGE_NAME: nourajaz/gitlab-example 
   IMAGE_TAG: ${{ github.ref_name }}
 
 
