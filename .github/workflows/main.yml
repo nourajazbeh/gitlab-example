@@ -1,15 +1,8 @@
 name: CI/CD Pipeline
-
 on: [push]
-  push:
-    tags:
-      - '*'
-
 env:
   IMAGE_NAME: nourajaz/gitlab-example 
-  IMAGE_TAG: ${{ github.ref_name }}
-
-
+  IMAGE_TAG: 2.0.0
 jobs:
   run_tests:
     runs-on: ubuntu-latest
